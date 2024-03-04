@@ -1,0 +1,10 @@
+on layout page, we cjanged the config settings for fontawsome. Why? Check for the reason in chatGPT or go through the video once again.
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+............................................
+This line uses the imported config object to disable the automatic injection of Font Awesome CSS styles. By default, Font Awesome automatically adds styles to the <head> element of your HTML document when you import the styles.css file. However, in certain situations, you might want to manage the inclusion of these styles yourself. This can be useful for:
+
+    Integrating Font Awesome with frameworks that have their own CSS management systems (like Next.js or Gatsby).
+    Controlling the order in which styles are loaded on your page.
+
